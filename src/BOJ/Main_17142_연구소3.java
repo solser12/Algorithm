@@ -29,21 +29,17 @@ public class Main_17142_연구소3 {
                 // 바이러스 위치 미리 저장
                 if (input == 2) virusLoc.add(new Loc(i, j));
                 lab[i][j] = input;
-
-                // 벽이 아닌 곳은 전부 count
-                if (input != 1) area++;
+                // 빈 공간은 전부 count
+                if (input == 0) area++;
             }
         }
 
-        area -= M;
         virusCnt = virusLoc.size();
         perm = new int[virusCnt];
         Arrays.fill(perm, virusCnt - M, virusCnt, 1);
         do {
-            System.out.println();
-            System.out.println();
-            System.out.println();
             bfs();
+            if (ans == 0) break;
         } while (nextPerm());
 
         System.out.println(ans == Integer.MAX_VALUE ? -1 : ans);
@@ -57,8 +53,8 @@ public class Main_17142_연구소3 {
             tempLab[i] = lab[i].clone();
         }
 
-        // 빈공간 복사
-        int tempNon = area;
+        // 빈공간 갯수 복사
+        int tempArea = area;
 
         Queue<Loc> q = new LinkedList<>();
         for (int i = 0; i < virusCnt; i++) {
@@ -71,6 +67,7 @@ public class Main_17142_연구소3 {
 
         int sec = 0;
         while(!q.isEmpty()) {
+            if (tempArea == 0) break;
 
             int size = q.size();
             for (int s = 0; s < size; s++) {
@@ -78,36 +75,19 @@ public class Main_17142_연구소3 {
                 for (int d = 0; d < 4; d++) {
                     int dx = loc.x + dt[d][0];
                     int dy = loc.y + dt[d][1];
-                    if (dx >= 0 && dx < N && dy >= 0 && dy < N) {
-                        if (tempLab[dx][dy] == 1 || tempLab[dx][dy] == 3) continue;
+                    if (dx >= 0 && dx < N && dy >= 0 && dy < N && (tempLab[dx][dy] == 0 || tempLab[dx][dy] == 2)) {
+                        if (tempLab[dx][dy] == 0) tempArea--;
                         q.add(new Loc(dx, dy));
                         tempLab[dx][dy] = 3;
-                        tempNon--;
                     }
                 }
             }
 
-            System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            for (int a[] : tempLab) {
-                for (int b : a) {
-                    System.out.print(b + " ");
-                }
-                System.out.println();
-            }
-            System.out.println(sec);
-
-            if (tempNon == 0) {
-                ans = Math.min(ans, sec);
-                System.out.println("!!" + sec);
-                return;
-            }
-
             sec++;
-            if (ans < sec) return;
-
-
+            if (sec >= ans) return;
         }
 
+        if (tempArea == 0) ans = Math.min(ans, sec);
 
     }
 
