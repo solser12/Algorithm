@@ -9,55 +9,58 @@ import java.util.StringTokenizer;
 
 public class Main_18513_샘터 {
 
+    static long ans = 0;
     static int N, K;
-    static long total = 0;
-    static boolean[] map = new boolean[200000001];
-    static Queue<House> q = new LinkedList<>();
+    static boolean[] map = new boolean[200200001];  // 100000000이 0
+    static int MAX_INDEX = 200200000;
+    static int MIN_INDEX = 0;
+    static int ZERO_INDEX = 100100000;
+    static int[] dt = {1, -1};
 
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-
+            
         N = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
 
         st = new StringTokenizer(br.readLine());
 
-        for (int i = 0; i < N; i++) {
-            int t = Integer.parseInt(st.nextToken()) + 100000000;
-            q.add(new House(t, t));
-            map[t] = true;
-        }
+        bfs(st);
 
-        bfs();
-
-        System.out.println(total);
+        System.out.println(ans);
         br.close();
     }
 
-    static void bfs() {
-        while(!q.isEmpty()) {
-            House h = q.poll();
-            for (int i = -1; i <= 1; i+=2) {
-                int d = h.x + i;
-                if (d >= 0 && d < 200000001 && !map[d]) {
-                    total += Math.abs(d - h.s);
-                    map[d] = true;
-                    K--;
-                    if (K == 0) return;
-                    q.add(new House(d, h.s));
+    static void bfs(StringTokenizer st) {
+
+        int houseCnt = 0; // 집 카운트
+
+        Queue<Integer> q = new LinkedList<>();
+        for (int i = 0; i < N; i++) {
+            // 샘터 위치, 샘터 위치 true
+            int temp = Integer.parseInt(st.nextToken()) + ZERO_INDEX;
+            map[temp] = true;
+            q.add(temp);
+        }
+
+        int dist = 1;
+        while (!q.isEmpty()) {
+            int size = q.size();
+            for (int s = 0; s < size; s++) {
+                int loc = q.poll();
+                for (int d = 0; d < 2; d++) {
+                    int dx = loc + dt[d];
+                    if (dx > MAX_INDEX || dx < MIN_INDEX || map[dx]) continue;
+                    q.add(dx);
+                    map[dx] = true;
+                    ans += dist;
+                    houseCnt++;
+                    if (houseCnt == K) return;
                 }
             }
-        }
-    }
-
-    static class House {
-        int x, s;
-
-        public House(int x, int s) {
-            this.x = x;
-            this.s = s;
+            dist++;
         }
     }
 }
