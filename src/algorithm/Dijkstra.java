@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/1753
 public class Dijkstra {
     static int N, K; // 정점갯수, 간선갯수
     static int start; // 출발 정점
