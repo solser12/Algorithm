@@ -37,6 +37,7 @@ public class Main_11066_파일합치기 {
 
             for (int[] a : dp) {
                 for (int b : a) {
+
                     System.out.print(b + "\t");
                 }
                 System.out.println();
