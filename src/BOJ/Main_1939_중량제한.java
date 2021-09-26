@@ -66,7 +66,7 @@ public class Main_1939_중량제한 {
 
         Queue<Bridge> q = new LinkedList<>();
         boolean[] visited = new boolean[N];
-        q.offer(new Bridge(0, 0));
+        q.offer(new Bridge(start, 0));
         visited[start] = true;
 
         while (!q.isEmpty()) {
