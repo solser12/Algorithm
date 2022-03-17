@@ -1,22 +1,24 @@
 package algorithm;
 
-import java.util.Arrays;
-
 public class NextPermutaion {
 
-    static int size = 8;
-    static int[] perm = {0, 0, 0, 0, 1, 1, 1, 1};
+    static int[] perm = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    static int size = perm.length;
 
     public static void main(String[] args) {
 
-        int cnt = 0;
+        int cnt = 1;
         do {
-            System.out.println(Arrays.toString(perm));
+            if (cnt == 2222222) {
+                break;
+            }
             cnt++;
-            if (cnt == 23) break;
         } while (nextPermutation());
 
-        System.out.println(cnt);
+        for (int i : perm) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
     }
 
     static boolean nextPermutation() {
