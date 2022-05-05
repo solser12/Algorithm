@@ -1,4 +1,4 @@
-package Programmers.devmatchin상반기;
+package Programmers.devmatchin2021상반기;
 
 public class 로또의최고순위와최저순위 {
 
