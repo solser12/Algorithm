@@ -1,4 +1,4 @@
-package Programmers.KaKao2020Blind;
+package Programmers.kaKao2020Blind;
 
 public class 문자열압축 {
 
