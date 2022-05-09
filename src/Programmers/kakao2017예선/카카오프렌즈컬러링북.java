@@ -1,4 +1,4 @@
-package Programmers.kakao2017;
+package Programmers.kakao2017예선;
 
 import java.util.LinkedList;
 import java.util.Queue;
