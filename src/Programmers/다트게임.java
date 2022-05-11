@@ -1,15 +1,10 @@
-package Programmers.kakao2018Blind;
+package Programmers;
 
 import java.util.Arrays;
 
 public class 다트게임 {
 
-    public static void main(String[] args) {
-
-        System.out.println(solution("1S2D*3T"));
-    }
-
-    public static int solution(String dartResult) {
+    public int solution(String dartResult) {
 
         char[] order = dartResult.toCharArray();
 
