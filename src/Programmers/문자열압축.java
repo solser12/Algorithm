@@ -1,18 +1,8 @@
-package Programmers.kaKao2020Blind;
+package Programmers;
 
 public class 문자열압축 {
 
-    public static void main(String[] args) {
-
-//        System.out.println(solution("aabbaccc"));
-//        System.out.println(solution("ababcdcdababcdcd"));
-//        System.out.println(solution("abcabcdede"));
-//        System.out.println(solution("abcabcabcabcdededededede"));
-//        System.out.println(solution("xababcdcdababcdcd"));
-        System.out.println(solution("abcdabcdede"));
-    }
-
-    public static int solution(String s) {
+    public int solution(String s) {
 
         int ans = s.length();
 
