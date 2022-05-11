@@ -1,17 +1,10 @@
-package Programmers.kaKao2021Blind;
+package Programmers;
 
 import java.util.*;
 
 public class 메뉴리뉴얼 {
-
-    public static void main(String[] args) {
-
-        String[] orders = {"ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"};
-        int[] course = {2, 3, 4};
-        System.out.println(Arrays.toString(solution(orders, course)));
-    }
-
-    public static String[] solution(String[] orders, int[] course) {
+    
+    public String[] solution(String[] orders, int[] course) {
 
         HashMap<Integer, HashMap<String, Integer>> totalCount = new HashMap<>();
         for (int c : course) {
@@ -46,7 +39,7 @@ public class 메뉴리뉴얼 {
         return result.toArray(new String[0]);
     }
 
-    public static void find(int goal, int cnt, int index, char[] order, String pick, HashMap<String, Integer> count) {
+    public void find(int goal, int cnt, int index, char[] order, String pick, HashMap<String, Integer> count) {
 
         if (index >= order.length) {
             if (goal == cnt) {
