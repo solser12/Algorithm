@@ -1,17 +1,8 @@
-package Programmers.kaKao2021Blind;
+package Programmers;
 
 public class 신규아이디추천 {
 
-    public static void main(String[] args) {
-
-        System.out.println(solution("...!@BaT#*..y.abcdefghijklm"));
-        System.out.println(solution("z-+.^."));
-        System.out.println(solution("=.="));
-        System.out.println(solution("123_.def"));
-        System.out.println(solution("abcdefghijklmn.p"));
-    }
-
-    public static String solution(String new_id) {
+    public String solution(String new_id) {
 
         char[] id = new_id.toCharArray();
         for (int i = 0; i < id.length; i++) {
@@ -70,7 +61,7 @@ public class 신규아이디추천 {
         return sb.toString();
     }
 
-    public static boolean checkChar(char c) {
+    public boolean checkChar(char c) {
         return ('a' <= c && c <= 'z') || ('0' <= c && c <= '9') || (c == '-') || (c == '.') || (c == '_');
     }
 }
