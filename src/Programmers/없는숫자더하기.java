@@ -1,4 +1,4 @@
-package Programmers.월간코드챌린지시즌3;
+package Programmers;
 
 public class 없는숫자더하기 {
     public int solution(int[] numbers) {
