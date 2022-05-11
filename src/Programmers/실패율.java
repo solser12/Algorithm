@@ -1,16 +1,10 @@
-package Programmers.kakao2019Blind;
+package Programmers;
 
 import java.util.Arrays;
 
 public class 실패율 {
 
-    public static void main(String[] args) {
-
-        int[] arr = {2, 1, 2, 6, 2, 4, 3, 3};
-        solution(5, arr);
-    }
-
-    public static int[] solution(int N, int[] input) {
+    public int[] solution(int N, int[] input) {
 
         int[] count = new int[N+1];
         int[] sum = new int[N+1];
@@ -40,7 +34,7 @@ public class 실패율 {
         return ans;
     }
 
-    public static class Stage implements Comparable<Stage> {
+    public class Stage implements Comparable<Stage> {
         int num;
         double calc;
 
