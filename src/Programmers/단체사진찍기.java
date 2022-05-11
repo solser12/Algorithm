@@ -1,4 +1,4 @@
-package Programmers.kakao2017본선;
+package Programmers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
