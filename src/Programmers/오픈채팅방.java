@@ -1,4 +1,4 @@
-package Programmers.kakao2019Blind;
+package Programmers;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,13 +6,7 @@ import java.util.StringTokenizer;
 
 public class 오픈채팅방 {
 
-    public static void main(String[] args) {
-
-        String[] s = {"Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"};
-        solution(s);
-    }
-
-    public static String[] solution(String[] record) {
+    public String[] solution(String[] record) {
 
         HashMap<String, String> hashmap = new HashMap<>();
         ArrayList<Info> info = new ArrayList<>();
@@ -48,7 +42,7 @@ public class 오픈채팅방 {
         return ans;
     }
 
-    public static class Info {
+    public class Info {
         String uid;
         int type;
 
