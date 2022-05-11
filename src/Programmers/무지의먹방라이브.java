@@ -1,16 +1,10 @@
-package Programmers.kakao2019Blind;
+package Programmers;
 
 import java.util.Arrays;
 
 public class 무지의먹방라이브 {
-
-    public static void main(String[] args) {
-
-        int[] food = {3, 1, 2, 2, 2};
-        solution(food, 100);
-    }
-
-    public static int solution(int[] food_times, long k) {
+    
+    public int solution(int[] food_times, long k) {
 
         int ans = 0;
         int len = food_times.length;
@@ -57,7 +51,7 @@ public class 무지의먹방라이브 {
         return ans + 1;
     }
 
-    public static class Food implements Comparable<Food> {
+    public class Food implements Comparable<Food> {
         int time, idx;
 
         public Food(int time, int idx) {
