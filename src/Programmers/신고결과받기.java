@@ -1,4 +1,4 @@
-package Programmers.kakao2022Blind;
+package Programmers;
 
 import java.util.*;
 
