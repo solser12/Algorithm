@@ -1,14 +1,6 @@
-package Programmers.kakao2018Blind;
+package Programmers;
 
 public class 비밀지도 {
-
-    public static void main(String[] args) {
-
-        int n = 5;
-        int[] arr1 = {9, 20, 28, 18, 11};
-        int[] arr2 = {30, 1, 21, 17, 28};
-        solution(n, arr1, arr2);
-    }
 
     public static String[] solution(int n, int[] arr1, int[] arr2) {
 
@@ -28,7 +20,6 @@ public class 비밀지도 {
                 if ((map[i] & idx) > 0) sb.append('#');
                 else sb.append(' ');
             }
-            System.out.println(sb);
             ans[i] = sb.toString();
         }
 
