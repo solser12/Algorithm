@@ -1,4 +1,4 @@
-package Programmers.kakao2018Blind;
+package Programmers;
 
 import java.util.Deque;
 import java.util.HashMap;
@@ -6,15 +6,7 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class 캐시 {
-
-    public static void main(String[] args) {
-
-        int c = 2;
-        String[] s = {"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "SanFrancisco", "Seoul", "Rome", "Paris", "Jeju", "NewYork", "Rome"};
-        System.out.println(solution(c, s));
-    }
-
-    public static int solution(int cacheSize, String[] cities) {
+    public int solution(int cacheSize, String[] cities) {
 
         HashMap<String, Integer> hashMap = new HashMap<>();
 
@@ -57,7 +49,7 @@ public class 캐시 {
         return time;
     }
 
-    public static String change(String city) {
+    public String change(String city) {
         char[] arr = city.toCharArray();
         for (int i = 0; i < arr.length; i++) {
             if ('A' <= arr[i] && arr[i] <= 'Z') {
