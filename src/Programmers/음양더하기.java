@@ -1,4 +1,4 @@
-package Programmers.월간코드챌린지시즌2;
+package Programmers;
 
 public class 음양더하기 {
     public int solution(int[] absolutes, boolean[] signs) {
