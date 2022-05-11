@@ -1,17 +1,11 @@
-package Programmers.kakao2021internship;
+package Programmers;
 
 import java.util.Stack;
 import java.util.StringTokenizer;
 
 public class 표편집 {
 
-    public static void main(String[] args) {
-
-        String[] cmd = {"D 2","C","U 3","C","D 4","C","U 2","Z","Z","U 1","C"};
-        solution(8, 2, cmd);
-    }
-
-    public static String solution(int n, int k, String[] cmd) {
+    public String solution(int n, int k, String[] cmd) {
 
         Program program = new Program();
         for (int i = 0; i < n; i++) {
@@ -35,11 +29,10 @@ public class 표편집 {
             }
         }
 
-        System.out.println(program.getResult(n));
         return program.getResult(n);
     }
 
-    public static class Program {
+    public class Program {
 
         Node front = null, end = null;
         int size = 0;
@@ -135,7 +128,7 @@ public class 표편집 {
         }
     }
 
-    public static class Node {
+    public class Node {
         Node prev = null, next = null;
         int value;
 
