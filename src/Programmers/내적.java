@@ -1,4 +1,4 @@
-package Programmers.월간코드챌린지시즌1;
+package Programmers;
 
 public class 내적 {
     public int solution(int[] a, int[] b) {
