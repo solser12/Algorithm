@@ -6,16 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class 단체사진찍기 {
-
-    public static void main(String[] args) {
-
-        int n = 2;
-        String[] data = {"N~F=0", "R~T>2"};
-//        String[] data = {"M~C<2", "C~M>1"};
-        System.out.println(solution(n, data));
-    }
-
-    public static int solution(int n, String[] data) {
+    public int solution(int n, String[] data) {
 
         char[] friends = {'A', 'C', 'F', 'J', 'M', 'N', 'R', 'T'};
         HashMap<Character, Integer> friendToIndex = new HashMap<>();
@@ -36,7 +27,7 @@ public class 단체사진찍기 {
         return answer;
     }
 
-    public static boolean checkRule(HashMap<Character, Integer> friendToIndex, HashMap<Character, ArrayList<Rule>> rules) {
+    public boolean checkRule(HashMap<Character, Integer> friendToIndex, HashMap<Character, ArrayList<Rule>> rules) {
         for (Map.Entry<Character, ArrayList<Rule>> entry : rules.entrySet()) {
             for (Rule rule : entry.getValue()) {
                 if (!rule.check(friendToIndex.get(entry.getKey()), friendToIndex.get(rule.target))) {
@@ -48,7 +39,7 @@ public class 단체사진찍기 {
         return true;
     }
 
-    public static HashMap<Character, ArrayList<Rule>> makeRule(char[] friends, String[] data) {
+    public HashMap<Character, ArrayList<Rule>> makeRule(char[] friends, String[] data) {
 
         HashMap<Character, ArrayList<Rule>> rules = new HashMap<>();
         for (char friend : friends) {
@@ -63,7 +54,7 @@ public class 단체사진찍기 {
         return rules;
     }
 
-    public static boolean nextPermutation(HashMap<Character, Integer> friendToIndex, char[] friends) {
+    public boolean nextPermutation(HashMap<Character, Integer> friendToIndex, char[] friends) {
 
         int i = friends.length - 1;
         while (i > 0 && friends[i - 1] >= friends[i]) i--;
@@ -92,7 +83,7 @@ public class 단체사진찍기 {
         return true;
     }
 
-    public static class Rule {
+    public class Rule {
         char target, type;
         int value;
 
