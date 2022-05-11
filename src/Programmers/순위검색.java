@@ -1,17 +1,10 @@
-package Programmers.kaKao2021Blind;
+package Programmers;
 
 import java.util.*;
 
 public class 순위검색 {
 
-    public static void main(String[] args) {
-
-        String[] info = {"java backend junior pizza 150","python frontend senior chicken 210","python frontend senior chicken 150","cpp backend senior pizza 260","java backend junior chicken 80","python backend senior chicken 50"};
-        String[] query = {"java and backend and junior and pizza 100","python and frontend and senior and chicken 200","cpp and - and senior and pizza 250","- and backend and senior and - 150","- and - and - and chicken 100","- and - and - and - 150"};
-        System.out.println(Arrays.toString(solution(info, query)));
-    }
-
-    public static int[] solution(String[] info, String[] query) {
+    public int[] solution(String[] info, String[] query) {
 
         Node start = init();
         int[] ans = new int[query.length];
@@ -70,7 +63,7 @@ public class 순위검색 {
         return ans;
     }
 
-    public static int binarySearch(ArrayList<Integer> arr, int target) {
+    public int binarySearch(ArrayList<Integer> arr, int target) {
         int left = -1, right = arr.size();
         while (left + 1 < right) {
             int mid = (left + right) >> 1;
@@ -84,7 +77,7 @@ public class 순위검색 {
         return arr.size() - right;
     }
 
-    public static Node init() {
+    public Node init() {
 
         Queue<Node> q = new LinkedList<>();
 
@@ -130,7 +123,7 @@ public class 순위검색 {
         return start;
     }
 
-    public static class Node {
+    public class Node {
         HashMap<String, Node> next;
         ArrayList<Integer> score;
 
