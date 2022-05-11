@@ -1,20 +1,14 @@
-package Programmers.kakao2018Blind;
+package Programmers;
 
 import java.util.Arrays;
 
 public class 프렌즈4블록 {
 
-    public static void main(String[] args) {
-
-        String[] s = {"TTTANT", "RRFACC", "RRRFCC", "TRRRAA", "TTMMMF", "TMMTTJ"};
-        solution(6, 6, s);
-    }
-
     static int ans = 0;
     static char[][] game, temp;
     static int[][] dt = {{0, 0}, {1, 0}, {0, 1}, {1, 1}};
 
-    public static int solution(int m, int n, String[] board) {
+    public int solution(int m, int n, String[] board) {
 
         temp = new char[m][n];
         game = new char[m][];
@@ -29,7 +23,7 @@ public class 프렌즈4블록 {
         return ans;
     }
 
-    public static char[][] down(int m, int n) {
+    public char[][] down(int m, int n) {
 
         char[][] move = new char[m][n];
         for (int i = 0; i < m; i++) {
@@ -48,7 +42,7 @@ public class 프렌즈4블록 {
         return move;
     }
 
-    public static boolean check(int m, int n) {
+    public boolean check(int m, int n) {
 
         for (int i = 0; i < m; i++) {
             temp[i] = game[i].clone();
