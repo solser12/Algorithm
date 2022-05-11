@@ -2,7 +2,7 @@ package Programmers;
 
 public class 비밀지도 {
 
-    public static String[] solution(int n, int[] arr1, int[] arr2) {
+    public String[] solution(int n, int[] arr1, int[] arr2) {
 
         String[] ans = new String[n];
 
