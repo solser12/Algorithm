@@ -1,4 +1,4 @@
-package Programmers.kakao2021internship;
+package Programmers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,21 +7,11 @@ import java.util.Queue;
 
 public class 거리두기확인하기 {
 
-    public static void main(String[] args) {
+    public char[][] room = new char[5][5];
+    public ArrayList<Loc> pLoc = new ArrayList<>();
+    public int[][] dt = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
-        String[][] places = {{"POOOP", "OXXOX", "OPXPX", "OOXOX", "POXXP"},
-                {"POOPX", "OXPXP", "PXXXO", "OXXXO", "OOOPP"},
-                {"PXOPX", "OXOXP", "OXPOX", "OXXOP", "PXPOX"},
-                {"OOOXX", "XOOOX", "OOOXX", "OXOOX", "OOOOO"},
-                {"PXPXP", "XPXPX", "PXPXP", "XPXPX", "PXPXP"}};
-        solution(places);
-    }
-
-    public static char[][] room = new char[5][5];
-    public static ArrayList<Loc> pLoc = new ArrayList<>();
-    public static int[][] dt = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-
-    public static int[] solution(String[][] places) {
+    public int[] solution(String[][] places) {
 
         int[] result = new int[5];
 
@@ -43,7 +33,7 @@ public class 거리두기확인하기 {
         return result;
     }
 
-    public static int check() {
+    public int check() {
 
         for (Loc loc : pLoc) {
             if (!bfs(loc)) {
@@ -54,7 +44,7 @@ public class 거리두기확인하기 {
         return 1;
     }
 
-    public static boolean bfs(Loc loc) {
+    public boolean bfs(Loc loc) {
 
         Queue<Loc> q = new LinkedList<>();
         q.offer(loc);
@@ -85,11 +75,11 @@ public class 거리두기확인하기 {
         return true;
     }
 
-    public static boolean check(int x, int y) {
+    public boolean check(int x, int y) {
         return 0 <= x && x < 5 && 0 <= y && y < 5;
     }
 
-    public static class Loc {
+    public class Loc {
         int x, y;
 
         public Loc(int x, int y) {
