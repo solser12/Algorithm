@@ -5,7 +5,6 @@ import java.util.Arrays;
 public class 실패율 {
 
     public int[] solution(int N, int[] input) {
-
         int[] count = new int[N+1];
         int[] sum = new int[N+1];
         Stage[] stages = new Stage[N];
