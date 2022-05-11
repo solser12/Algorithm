@@ -1,17 +1,12 @@
-package Programmers.kakao2021internship;
+package Programmers;
 
 import java.util.HashMap;
 
 public class 숫자문자열과영단어 {
 
-    public static void main(String[] args) {
+    public HashMap<String, Integer> stringToInt = new HashMap<>();
 
-        solution("one4seveneight");
-    }
-
-    public static HashMap<String, Integer> stringToInt = new HashMap<>();
-
-    public static int solution(String s) {
+    public int solution(String s) {
 
         init();
 
@@ -34,7 +29,7 @@ public class 숫자문자열과영단어 {
         return Integer.parseInt(result.toString());
     }
 
-    public static void init() {
+    public void init() {
         stringToInt.put("zero", 0);
         stringToInt.put("one", 1);
         stringToInt.put("two", 2);
