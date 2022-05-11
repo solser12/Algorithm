@@ -1,4 +1,4 @@
-package Programmers.kakao2019Blind;
+package Programmers;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,28 +6,7 @@ import java.util.HashSet;
 
 public class 후보키 {
 
-    public static void main(String[] args) {
-
-        String[][] s = {
-                {"100","ryan","music","2"},
-                {"200","apeach","math","2"},
-                {"300","tube","computer","3"},
-                {"400","con","computer","4"},
-                {"500","muzi","music","3"},
-                {"600", "apeach","music","2"}
-        };
-//        String[][] s = {
-//                {"1","a", "1", "b", "c"},
-//                {"2","a", "", "b", "a"},
-//                {"3","a", "2", "b", "e"},
-//                {"4","a", "c", "b", "c"},
-//                {"5","a", "c", "b", "c"},
-//                {"6","a", "c", "b", "c"}
-//        };
-        solution(s);
-    }
-
-    public static int solution(String[][] relation) {
+    public int solution(String[][] relation) {
 
         int ans = 0;
         int size = relation[0].length;
@@ -83,7 +62,7 @@ public class 후보키 {
         return ans;
     }
 
-    public static class Data implements Comparable<Data> {
+    public class Data implements Comparable<Data> {
         int bit, count;
         ArrayList<Integer> list;
 
