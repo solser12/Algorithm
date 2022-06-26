@@ -2,23 +2,18 @@ package algorithm;
 
 public class NextPermutaion {
 
-    static int[] perm = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    static int[] perm = {0, 1, 2 ,3 ,4 ,5 ,6, 7 ,8, 9, 10};
     static int size = perm.length;
 
     public static void main(String[] args) {
 
-        int cnt = 1;
+        int cnt = 0;
         do {
-            if (cnt == 2222222) {
-                break;
-            }
+//            System.out.println(Arrays.toString(perm));
             cnt++;
         } while (nextPermutation());
 
-        for (int i : perm) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+        System.out.println(cnt);
     }
 
     static boolean nextPermutation() {
