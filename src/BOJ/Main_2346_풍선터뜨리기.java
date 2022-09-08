@@ -21,23 +21,26 @@ public class Main_2346_풍선터뜨리기 {
             deque.offerLast(new Balloon(i, Integer.parseInt(st.nextToken())));
         }
 
-        while (true) {
-            sb.append(deque.peekFirst().index).append(' ');
-            int cnt = deque.pollFirst().num;
-            if (deque.isEmpty()) {
-                break;
-            }
-            if (cnt > 0) {
+        int cnt = 0;
+        boolean way = true;
+        while (!deque.isEmpty()) {
+            if (way) {
                 for (int i = 0; i < cnt - 1; i++) {
                     deque.offerLast(deque.pollFirst());
                 }
             } else {
-                for (int i = 0; i < cnt * -1; i++) {
+                for (int i = 0; i < cnt; i++) {
                     deque.offerFirst(deque.pollLast());
                 }
             }
+
+            Balloon temp = deque.pollFirst();
+            cnt = Math.abs(temp.num);
+            way = temp.num > 0;
+            sb.append(temp.index).append(' ');
         }
 
+        sb.setLength(sb.length() - 1);
         System.out.println(sb);
         br.close();
     }
