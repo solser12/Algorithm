@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_1051_숫자정사각형 {
+public class Main_1051_숫자_정사각형 {
 
     public static void main(String[] args) throws IOException {
 
