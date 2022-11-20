@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main_1038_감소하는수 {
+public class Main_1038_감소하는_수 {
 
     static int N, d, cnt;
     static boolean isFind = false;
