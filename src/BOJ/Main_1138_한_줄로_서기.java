@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class Main_1138_한줄로서기 {
+public class Main_1138_한_줄로_서기 {
 
     public static void main(String[] args) throws IOException {
 
