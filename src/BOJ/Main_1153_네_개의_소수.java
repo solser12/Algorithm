@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-public class Main_1153_네개의소수 {
+public class Main_1153_네_개의_소수 {
 
     public static void main(String[] args) throws IOException {
 
