@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_1188_음식평론가 {
+public class Main_1188_음식_평론가 {
 
     public static void main(String[] args) throws IOException {
 
