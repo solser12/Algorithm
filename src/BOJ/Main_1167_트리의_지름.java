@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_1167_트리의지름 {
+public class Main_1167_트리의_지름 {
 
     static int N, ans = 0, second = 0;
     static ArrayList<Node>[] tree;
