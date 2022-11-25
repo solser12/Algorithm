@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_1194_달이차오른다가자 {
+public class Main_1194_달이_차오른다_가자 {
 
     static int N, M, step = 1;
     static char[][] map;
