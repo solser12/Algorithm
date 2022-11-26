@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
-public class Main_1197_최소스패닝트리 {
+public class Main_1197_최소_스패닝_트리 {
 
     static int V, E, cnt = 0, ans = 0;
     static ArrayList<Edge>[] list;
