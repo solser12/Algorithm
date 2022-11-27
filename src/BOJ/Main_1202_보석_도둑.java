@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.StringTokenizer;
 
-public class Main_1202_보석도둑 {
+public class Main_1202_보석_도둑 {
 
     public static void main(String[] args) throws IOException {
 
