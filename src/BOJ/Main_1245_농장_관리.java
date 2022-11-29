@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_1245_농장관리 {
+public class Main_1245_농장_관리 {
 
     static int N, M, ans = 0, minHeight = Integer.MAX_VALUE;
     static int[][] map;
