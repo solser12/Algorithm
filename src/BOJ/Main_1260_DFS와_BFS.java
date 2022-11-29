@@ -3,7 +3,7 @@ package BOJ;
 import java.io.*;
 import java.util.*;
 
-public class Main_1260_DFS와BFS {
+public class Main_1260_DFS와_BFS {
 
     public static void main(String[] args) throws IOException {
 
