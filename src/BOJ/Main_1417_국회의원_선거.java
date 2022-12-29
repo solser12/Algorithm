@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.PriorityQueue;
 
-public class Main_1417_국회의원선거 {
+public class Main_1417_국회의원_선거 {
 
     public static void main(String[] args) throws IOException {
 
