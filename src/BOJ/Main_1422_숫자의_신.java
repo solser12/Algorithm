@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_1422_숫자의신 {
+public class Main_1422_숫자의_신 {
 
     public static void main(String[] args) throws IOException {
 
